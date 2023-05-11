@@ -32,28 +32,14 @@
     <script type="text/javascript">
 
     	$("#btn").on("click", function(){
-    		alert("아이디는 " + $("#id").val() + " 입니다.");
-    		alert("비밀번호는 " + $("#password").val() + " 입니다.");
-    		alert("이름은 " + $("#name").val() + " 입니다.");
-    		alert("이메일은 " + $("#email").val() + " 입니다.");
-    		alert("전화번호는 " + $("#tel").val() + " 입니다.");
-    		alert("생년월일은 " + $("#date").val() + " 입니다.");
+    		console.log("아이디는 " + $("#id").val() + " 입니다.");
+    		console.log("비밀번호는 " + $("#password").val() + " 입니다.");
+    		console.log("이름은 " + $("#name").val() + " 입니다.");
+    		console.log("이메일은 " + $("#email").val() + " 입니다.");
+    		console.log("전화번호는 " + $("#tel").val() + " 입니다.");
+    		console.log("생년월일은 " + $("#date").val() + " 입니다.");
     	});
 		    
-    	// Get the input field
-    	var input = document.getElementById("myInput");
-
-    	// Execute a function when the user presses a key on the keyboard
-    	input.addEventListener("keypress", function(event) {
-    	  // If the user presses the "Enter" key on the keyboard
-    	  if (event.key === "Enter") {
-    	    // Cancel the default action, if needed
-    	    event.preventDefault();
-    	    // Trigger the button element with a click
-    	    document.getElementById("myBtn").click();
-    	  }
-    	});
-    	
 //     	$("#name").val("장동건");
     	
 //     	$("#btn").on("click", function(){
