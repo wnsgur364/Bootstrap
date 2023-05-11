@@ -20,8 +20,18 @@
 		  <input type="email" class="form-control" id="email" placeholder="" name="">
 		  <label for="tel" class="form-label">Tel</label>
 		  <input type="tel" class="form-control" id="tel" placeholder="" name="">
+		  <label for="number" class="form-label">Number</label>
+		  <input type="number" class="form-control" id="number" placeholder="" name="">
+		  <label for="range" class="form-label">Range</label>
+		  <input type="range" class="form-control" id="range" placeholder="" name="">
 		  <label for="date" class="form-label">Date</label>
 		  <input type="date" class="form-control" id="date" placeholder="" name="">
+		  <label for="month" class="form-label">Month</label>
+		  <input type="month" class="form-control" id="month" placeholder="" name="">
+		  <label for="time" class="form-label">Time</label>
+		  <input type="time" class="form-control" id="time" placeholder="" name="">
+		  <label for="color" class="form-label">Color</label>
+		  <input type="color" class="form-control" id="color" placeholder="" name="">
 		</div>
 		<div>
 		  <button type="button" class="btn btn-primary" id="btn">저장</button>
@@ -37,7 +47,12 @@
     		console.log("이름은 " + $("#name").val() + " 입니다.");
     		console.log("이메일은 " + $("#email").val() + " 입니다.");
     		console.log("전화번호는 " + $("#tel").val() + " 입니다.");
-    		console.log("생년월일은 " + $("#date").val() + " 입니다.");
+    		console.log("숫자는 " + $("number").val() + " 입니다.");
+    		console.log("범위는 " + $("#range").val() + " 입니다.");
+    		console.log("날짜는 " + $("#date").val() + " 입니다.");
+    		console.log("월은 " + $("#month").val() + " 입니다.");
+    		console.log("시간은 " + $("#time").val() + " 입니다.");
+    		console.log("색상은 " + $("#color").val() + " 입니다.");
     	});
 		    
 //     	$("#name").val("장동건");
