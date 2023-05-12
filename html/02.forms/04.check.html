@@ -70,26 +70,19 @@
   			
   			/* checkbox 중복체크 불가 */
   			
-			$('input[type="checkbox"][name="gender"]').click(function(){  			 
+			$('input[name="gender"]').click(function(){  			 
   		  		if($(this).prop('checked')){  		 
-  		     		$('input[type="checkbox"][name="gender"]').prop('checked',false);  		 
+  		     		$('input[name="gender"]').prop('checked',false);  		 
   		     		$(this).prop('checked',true);  		 
   		    	}  		  
   		   	});
   			
-  			$('input[type="checkbox"][name="telecom"]').click(function(){  			 
+  			$('input[name="telecom"]').click(function(){  			 
   		  		if($(this).prop('checked')){  		 
-  		     		$('input[type="checkbox"][name="telecom"]').prop('checked',false);  		 
+  		     		$('input[name="telecom"]').prop('checked',false);  		 
   		     		$(this).prop('checked',true);  		 
   		    	}  		  
   		   	});
-  			
-  			/* $('input[type="checkbox"][name="inlineCheckbox"]').click(function(){  			 
-  		  		if($(this).prop('checked')){  		 
-  		     		$('input[type="checkbox"][name="inlineCheckbox"]').prop('checked',false);  		 
-  		     		$(this).prop('checked',true);  		 
-  		    	}  		  
-  		   	}); */ 
   			
 			/* click event */
 			
@@ -116,6 +109,12 @@
 	  				console.log(arrayGender[i]);
 	  			}
 	  			
+	  			/* JavaScript 문 (임의로 변경) */
+	  			
+	  			document.getElementsByName("gender")[0].chacked = false;
+	  			document.getElementsByName("gender")[1].chacked = true;
+	  			document.getElementById("etc").checked = true;
+	  			
 	  			/* telecom */
 	  			
 	  			for (var i=0; i<obj_length2; i++) {
@@ -128,6 +127,11 @@
 	  			for (var i=0; i<arrayTelecom.length; i++) {
 	  				console.log(arrayTelecom[i]);
   				}
+	  			
+	  			/* Jquery 문 (임의로 변경) */
+	  			
+	  			$("#SKT").prop("checked", false);
+	  			$("#LGT").prop("checked", true);
   				
 	  			/* inlineCheckbox */
 	  			
