@@ -3,14 +3,14 @@
 	<head>
 		<meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<title>Bootstrap Check</title>
+    	<title>Bootstrap Checkbox</title>
     	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 	</head>
   	<body>
   		<div class="container">
 			<!-- Checkbox -->
-<!-- 
+
   			<div class="row">
 		  		<form>
 			  		<p class="h5">성별</p>
@@ -68,96 +68,32 @@
 					<br>
 				</form>
 				<button type="button" class="btn btn-success" id="btn">확인</button>
-			</div>
- -->
-			<!-- Radio -->
-			<div class="row">
-		  			<form>
-			  		<p class="h5">성별</p>
-			  		<div class="form-check">
-						<input class="form-check-input" type="radio" value="male" name="gender" id="male">
-					  	<label class="form-check-label" for="male">
-					    	남자
-					  	</label>
-					</div>
-					<div class="form-check">
-					  	<input class="form-check-input" type="radio" value="female" name="gender" id="female">
-					  	<label class="form-check-label" for="female">
-					    	여자
-					  	</label>
-					</div>
-					<div class="form-check">
-					  	<input class="form-check-input" type="radio" value="etc" name="gender" id="etc">
-					  	<label class="form-check-label" for="etc">
-					    	기타
-					  	</label>
-					</div>
-					<hr>
-					<p class="h5">통신사</p>
-					<div class="form-check">
-						<input class="form-check-input" type="radio" value="SKT" name="telecom" id="SKT">
-					  	<label class="form-check-label" for="SKT">
-					    	SKT
-					  	</label>
-					</div>
-					<div class="form-check">
-					  	<input class="form-check-input" type="radio" value="KT" name="telecom" id="KT">
-					  	<label class="form-check-label" for="KT">
-					    	KT
-					  	</label>
-					</div>
-					<div class="form-check">
-					  	<input class="form-check-input" type="radio" value="LGT" name="telecom" id="LGT">
-					  	<label class="form-check-label" for="LGT">
-					    	LGT U+
-					  	</label>
-					</div>
-					<hr>
-					<div class="form-check form-check-inline">
-					  	<input class="form-check-input" type="checkbox" name="inlineCheckbox" id="inlineCheckbox1" value="option1">
-					  	<label class="form-check-label" for="inlineCheckbox1">1</label>
-					</div>
-					<div class="form-check form-check-inline">	
-					  	<input class="form-check-input" type="checkbox" name="inlineCheckbox" id="inlineCheckbox2" value="option2">
-					  	<label class="form-check-label" for="inlineCheckbox2">2</label>
-					</div>
-					<div class="form-check form-check-inline">
-						  <input class="form-check-input" type="checkbox" name="inlineCheckbox" id="inlineCheckbox3" value="option3" disabled>
-						  <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
-					</div>
-					<br>
-				</form>
-				<button type="button" class="btn btn-success" id="btn">확인</button>
 			</div>				
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
  		<script src="js/jquery.min.js"></script>
 		<script type="text/javascript">
-/* 		
+		
   			// Checkbox javascript 문
 		
 	  		// checkbox 중복체크 불가
-	  	
-	  		var genderCheckbox = document.getElementsByName("gender");
-	  		
-	  		for (var i = 0; i < genderCheckbox.length; i++) {
-	  			genderCheckbox[i].addEventListener("click", function() {
+	  		  		
+	  		for (var i = 0; i < document.getElementsByName("gender").length; i++) {
+	  			document.getElementsByName("gender")[i].addEventListener("click", function() {
 	  		    	if (this.checked) {
-	  		      		for (var j = 0; j < genderCheckbox.length; j++) {
-	  		        		genderCheckbox[j].checked = false;
+	  		      		for (var j = 0; j < document.getElementsByName("gender").length; j++) {
+	  		      			document.getElementsByName("gender")[j].checked = false;
 	  		      		}
 	  					this.checked = true;
 	  		    	}
 	  		  	});
 	  		}
-	
-	  		var telecomCheckbox = document.getElementsByName("telecom");
-	  		
-	  		for (var i = 0; i < telecomCheckbox.length; i++) {
-	  		  	telecomCheckbox[i].addEventListener("click", function() {
+		  		
+	  		for (var i = 0; i < document.getElementsByName("telecom").length; i++) {
+	  			document.getElementsByName("telecom")[i].addEventListener("click", function() {
 	  		    	if (this.checked) {
-	  		      		for (var j = 0; j < telecomCheckbox.length; j++) {
-	  		        		telecomCheckbox[j].checked = false;
+	  		      		for (var j = 0; j < document.getElementsByName("telecom").length; j++) {
+	  		      			document.getElementsByName("telecom")[j].checked = false;
 	  		      		}
 	  		      		this.checked = true;
 	  		    	}
@@ -167,24 +103,18 @@
 	  		// click event
 	  		
 	  		document.getElementById("btn").addEventListener("click", function() {
-	  			
-	  		  	var arrayGender = new Array();
-	  		  	var arrayTelecom = new Array();
-	  		  	var arrayInlineCheckbox = new Array();
-	
+	  				
 	  		  	// gender
-	  		  	
-		  		var genderCheckbox = document.getElementsByName("gender");
-	  		  	
-		  		for (var i = 0; i < genderCheckbox.length; i++) {
-		  			if (genderCheckbox[i].checked == true) {
-		  		      	alert(genderCheckbox[i].value);
-		  		      	arrayGender.push(genderCheckbox[i].value);
+	  		  		  		  	
+		  		for (var i = 0; i < document.getElementsByName("gender").length; i++) {
+		  			if (document.getElementsByName("gender")[i].checked == true) {
+		  		      	alert(document.getElementsByName("gender")[i].value);
+		  		      	new Array().push(document.getElementsByName("gender")[i].value);
 		  		    }
 		  		}
 		
-		  		for (var i = 0; i < arrayGender.length; i++) {
-		  			console.log(arrayGender[i]);
+		  		for (var i = 0; i < new Array().length; i++) {
+		  			console.log(new Array()[i]);
 		  		}
 				
 		  		// 벨류값 임의 변경
@@ -195,16 +125,15 @@
 		
 		  		// telecom
 		  		
-		  		var telecomCheckbox = document.getElementsByName("telecom");
-		  		for (var i = 0; i < telecomCheckbox.length; i++) {
-		  			if (telecomCheckbox[i].checked == true) {
-		  		      	alert(telecomCheckbox[i].value);
-		  		      	arrayTelecom.push(telecomCheckbox[i].value);
+		  		for (var i = 0; i < document.getElementsByName("telecom").length; i++) {
+		  			if (document.getElementsByName("telecom")[i].checked == true) {
+		  		      	alert(document.getElementsByName("telecom")[i].value);
+		  		      	new Array().push(document.getElementsByName("telecom")[i].value);
 		  		    }
 		  		}
 		
-		  		for (var i = 0; i < arrayTelecom.length; i++) {
-		  			console.log(arrayTelecom[i]);
+		  		for (var i = 0; i < new Array().length; i++) {
+		  			console.log(new Array()[i]);
 		  		}
 		
 		  		// 벨류값 임의 변경
@@ -214,19 +143,18 @@
 		
 		  		// inlineCheckbox
 		  		
-		  		var inlineCheckbox = document.getElementsByName("inlineCheckbox");
-		  		for (var i = 0; i < inlineCheckbox.length; i++) {
-		  		    if (inlineCheckbox[i].checked == true) {
-		  		      	alert(inlineCheckbox[i].value);
-		  		      	arrayInlineCheckbox.push(inlineCheckbox[i].value);
+		  		for (var i = 0; i < document.getElementsByName("inlineCheckbox").length; i++) {
+		  		    if (document.getElementsByName("inlineCheckbox")[i].checked == true) {
+		  		      	alert(document.getElementsByName("inlineCheckbox")[i].value);
+		  		      	new Array().push(document.getElementsByName("inlineCheckbox")[i].value);
 		  		    }
 		  		}
 		
-		  		for (var i = 0; i < arrayInlineCheckbox.length; i++) {
-		  		    console.log(arrayInlineCheckbox[i]);
+		  		for (var i = 0; i < new Array().length; i++) {
+		  		    console.log(new Array()[i]);
 		  		}
 	  		});
- */
+
 /*  
  			// Checkbox Jquery 문
  			
@@ -298,59 +226,7 @@
 			  		console.log(arrayInlineCheckbox[i]);
 				}
 			});
- */	
-/*  
- 			// Radio Javascript 문
- 			
- 			const btn = document.getElementById("btn");
-			const genderInputs = document.getElementsByName("gender");
-			const telecomInputs = document.getElementsByName("telecom");
-			const etcInput = document.getElementById("etc");
-			const lgtInput = document.getElementById("LGT");
-			
-			btn.addEventListener("click", function() {
-				let genderValue;
-			  	let telecomValue;
-			
-			  	for (let i = 0; i < genderInputs.length; i++) {
-			    	if (genderInputs[i].checked) {
-			      		genderValue = genderInputs[i].value;
-			      		break;
-			    	}
-			  	}
-			
-			  	for (let i = 0; i < telecomInputs.length; i++) {
-			    	if (telecomInputs[i].checked) {
-			      		telecomValue = telecomInputs[i].value;
-			   			break;
-			    	}
-			  	}
-			
-				alert(genderValue);
-				console.log(genderValue);
-				alert(telecomValue);
-				console.log(telecomValue);
-				
-				etcInput.checked = true;
-				lgtInput.checked = true;
-			});
  */
- 
- 			// Radio Jquery 문
- 			
-			$("#btn").on("click", function() {
-				const genderValue = $("input[name='gender']:checked").val();
-				const telecomValue = $("input[name='telecom']:checked").val();
-				
-				alert(genderValue);
-				console.log(genderValue);
-				alert(telecomValue);
-				console.log(telecomValue);
-				
-				$("#etc").prop("checked", true);
-				$("#LGT").prop("checked", true);
-			});
-
-  		</script> 
+ 		</script> 
   	</body>
 </html>  			
