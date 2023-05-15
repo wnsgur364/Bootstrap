@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<title>Bootstrap demo</title>
+    	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  		<script src="https://kit.fontawesome.com/b05f67c88a.js" crossorigin="anonymous"></script>
+	</head>
+  	<body>
+		<div class="container-fluid d-flex align-items-center">	
+			<div class="col-md-auto">
+			    <a class="navbar-brand" href="#">
+			      	<img src="img/memory_ci_logo_1.png" alt="Bootstrap" width="100%" height="100%">
+			    </a>
+			</div>
+			<div class="col-md-auto h2 fw-bold" >ABC Management System</div>
+			<div class="col-3"></div>
+			<div class="col-md-auto">
+				<img src="img/man.png" class="rounded-circle" alt="Bootstrap" width="50" height="50">
+			</div>
+			<div class="col-2">
+				<div class="h5">Tony Chang</div>
+				<div class="p">Administrator</div>
+			</div> 
+			<div class="col-md-auto">
+				<a class="btn btn-bs-light-text-emphasis dropdown-toggle border border-dark-subtle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					언어
+				</a>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="#">한국어</a></li>
+					<li><a class="dropdown-item" href="#">English</a></li>
+				</ul>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg bg-body-tertiary">
+			<div class="container-fluid bg-info text-dark bg-opacity-10">
+				<a class="navbar-brand fs-3" href="#">Navbar</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav d-flex align-items-center fs-4">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#">회원관리</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">서비스관리</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">사이트관리</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">로그관리</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="seq.html">국가코드 관리</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">시스템관리</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container-fluid d-flex justify-content-between">
+			<div class="col-2 fs-4 gx-1">
+				<ul class="list-group list-group-flush">
+			  		<li class="list-group-item">
+			  			<a class="nav-link" href="index.html">> Home</a>
+			  		</li>
+			  		<li class="list-group-item">
+			  			<a class="nav-link" href="#">> Dashboard</a>	
+			  		</li>
+			  		<li class="list-group-item">
+			  			<a class="nav-link" href="#">> Orders</a>
+			  		</li>
+			  		<li class="list-group-item"><br></li>
+			 		<li class="list-group-item">
+			 			<a class="nav-link" href="#">> Account</a>
+			 		</li>
+				</ul>
+			</div>
+			<div class="col">
+				<div class="h4">국가코드 관리</div>
+				<form>
+					<div class="row g-5">
+						<div class="col-6">
+							<label for="seq" class="form-label d-flex">Seq<p class="text-danger">*</p></label>
+							<input class="form-control" list="datalistOptions" id="seq" placeholder="자동생성" disabled>
+							<datalist id="datalistOptions">
+							  	<option value="대한민국">
+							  	<option value="미국">
+							  	<option value="일본">
+							  	<option value="중국">
+							</datalist>
+						</div>
+					</div>
+					<br>
+					<div class="row g-5">
+						<div class="col-6">
+							<label for="countryName" class="form-label d-flex">
+								국가 이름<p class="text-danger">*</p>
+							</label>
+							<input type="text" class="form-control" id="countryName" placeholder="">
+						</div>
+					</div>
+					<div class="row g-5">
+						<div class="col-6">
+							<label for="countryNameKor" class="form-label">국가 이름 (한글)</label>
+							<input type="text" class="form-control" id="countryNameKor" placeholder="">
+						</div>
+						<div class="col-6">
+							<label for="countryNameEng" class="form-label">국가 이름 (영문)</label>
+							<input type="text" class="form-control" id="countryNameEng" placeholder="영대소문자">
+						</div>
+					</div>
+					<div class="row g-5">
+						<div class="col-6">
+							<label for="countryCodeTwo" class="form-label d-flex">국가 코드 (2자리)<p class="text-danger">*</p></label>
+							<input type="text" class="form-control" id="countryCodeTwo" placeholder="영대소문자">
+						</div>
+						<div class="col-6">
+							<label for="countryCodeThree" class="form-label d-flex">국가 코드 (3자리)<p class="text-danger">*</p></label>
+							<input type="text" class="form-control" id="countryCodeThree" placeholder="영대소문자">
+						</div>
+					</div>
+					<div class="row g-5">
+						<div class="col-6">
+							<label for="use" class="form-label d-flex">사용여부<p class="text-danger">*</p></label>
+							<select class="form-select" id="use" aria-label="Floating label select example">
+	    						<option value="1" selected>Y</option>
+	    						<option value="2">N</option>
+	  						</select>
+						</div>
+						<div class="col-6">
+							<label for="order" class="form-label d-flex">순서<p class="text-danger">*</p></label>
+							<input type="number" class="form-control" id="order" placeholder="숫자(0~255)">
+						</div>
+					</div>
+					<div class="row g-5">
+						<div class="col-6">
+							<label for="explanation" class="form-label">설명</label>
+							<textarea type="text" class="form-control" id="explanation" placeholder="" style="height: 200px"></textarea>
+						</div>
+					</div>
+				</form>
+				<div class="col float-start">
+					<button type="button" class="btn btn-secondary"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></button>
+				</div>
+				<div class="col float-end">
+					<button type="button" class="btn btn-success"><i class="fa-regular fa-bookmark" style="color: #ffffff;"></i></button>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="col d-flex justify-content-center">
+			<div class="p">(주)마이컴퍼니 | 대표 이준혁 | 사업자등록번호 111-11-111111 | 서울특별시 성동구 광나루로 123길 3층</div><br>
+		</div>
+		<div class="col d-flex justify-content-center">
+			<div class="p">Copyright 2014. Mycompany inc. all rights reserved</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  		<script src="js/jquery.min.js"></script>
+  	</body>
+</html>
