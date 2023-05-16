@@ -90,20 +90,21 @@
  						new Array().push( document.getElementsByName('hobby')[i].value );
  						console.log ( document.getElementsByName('hobby')[i].value )
  					} 
+ 					
+ 					document.getElementsByName('hobby')[0].checked = false;
+ 	 				document.getElementsByName('hobby')[2].checked = true;
+ 	 				alert( document.getElementsByName('hobby')[i].value )
+ 					console.log ( document.getElementsByName('hobby')[i].value )
 		
  				}
  				
- 				document.getElementsByName('hobby')[0].checked = false;
- 				document.getElementsByName('hobby')[2].checked = true;
- 				alert( document.getElementsByName('hobby')[].value )
- 				console.log ( document.getElementsByName('hobby')[i].value )
+ 				alert( document.querySelector("input[name='gender']:checked").value );
+ 				document.getElementsByName('gender')[1].checked = false;
+ 				document.getElementsByName('gender')[0].checked = true;
  				
  				
- 			});
- 		
- 		
- 		
- 		
+ 				});
+  		
  		</script>  	
   	</body>
 </html>
