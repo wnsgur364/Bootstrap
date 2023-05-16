@@ -50,7 +50,7 @@
 							<a class="nav-link" href="#">사이트관리</a>
 						</li>
 						<li class="nav-item">
-														<a class="nav-link" href="#">로그관리</a>
+							<a class="nav-link" href="#">로그관리</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">시스템관리</a>
@@ -132,7 +132,7 @@
 						<thead class="table-dark">
 							<tr>
 								<th scope="col">
-									<input type="checkbox" id="checkboxNoLabel" value="">
+									<input type="checkbox" name="checked" id="checkboxNoLabel0" value="">
 								</th>
 								<th scope="col">#</th>
 								<th scope="col">Seq</th>
@@ -149,7 +149,7 @@
 						<tbody>
 							<tr>
 								<th scope="col">
-									<input type="checkbox" id="checkboxNoLabel1" value="1">
+									<input type="checkbox" name="checked" id="checkboxNoLabel1" value="">
 								</th>
 						   		<th scope="row">3</th>
 						    	<td>4</td>
@@ -164,7 +164,7 @@
 						  	</tr>
 						  	<tr>
 						  		<th scope="col">
-									<input type="checkbox" id="checkboxNoLabel2" value="2">
+									<input type="checkbox" name="checked" id="checkboxNoLabel2" value="">
 								</th>
 						    	<th scope="row">2</th>
 						    	<td>2</td>
@@ -179,7 +179,7 @@
 						  	</tr>
 						  	<tr>
 						  		<th scope="col">
-									<input type="checkbox" id="checkboxNoLabel3" value="3">
+									<input type="checkbox" name="checked" id="checkboxNoLabel3" value="">
 								</th>
 						    	<th scope="row">3</th>
 						    	<td>1</td>
@@ -254,7 +254,8 @@
 		
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   		<script type="text/javascript">
-  		
+  			
+  			// bootstrap modal
 			var myModal = document.getElementById('staticBackdrop')
 			var myInput = document.getElementById('btnDelete')
 
@@ -268,6 +269,13 @@
 			myModal.addEventListener('shown.bs.modal', () => {
  				myInput.focus()
 			})
+			
+			// checkbox all check
+			document.getElementById("checkboxNoLabel0").addEventListener('change', function(){
+				for (var i = 0; i < document.getElementsByName("checked").length; i++) {
+					document.getElementsByName("checked")[i].checked = this.checked;
+				}
+			});
 			
 		</script>
   	</body>
