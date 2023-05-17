@@ -65,7 +65,7 @@
 			</div>
 		</nav>
 		<div class="container-fluid d-flex justify-content-between gap-3">
-			<div class="col-md-1 fs-6 gx-1">
+			<div class="col-md-2 fs-6 gx-1">
 				<ul class="list-group list-group-flush">
 			  		<li class="list-group-item">
 			  			<a class="nav-link" href="#">> Home</a>
@@ -242,7 +242,7 @@
 	  		<div class="modal-dialog">
 	    		<div class="modal-content">
 	      			<div class="modal-header">
-	        			<h1 class="modal-title fs-5" id="staticBackdropLabel">title</h1>
+	        			<h1 class="modal-title fs-5" id="staticBackdropTitle">title</h1>
 	        			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 	      			</div>
 	      			<div class="modal-body" id="staticBackdropBody">
@@ -268,6 +268,8 @@
 
 			myModal.addEventListener('shown.bs.modal', () => {
  				myInput.focus()
+ 				document.getElementById('staticBackdropLabel').textContent = "경고!!";
+				document.getElementById('staticBackdropBody').textContent = "정말로 삭제 하시겠습니까?";
 			})
 			
 			var myModal = document.getElementById('staticBackdrop')
@@ -279,12 +281,11 @@
 */			
 			
 			//$("#modalConfirm").modal("show");
-  			
 			document.getElementById('btnDelete').addEventListener('click', function(){
 				
 				document.getElementById('staticBackdrop').style.display = "block";
 				
-				document.getElementById('staticBackdropLabel').textContent = "경고!!";
+				document.getElementById('staticBackdropTitle').textContent = "경고!!";
 				document.getElementById('staticBackdropBody').textContent = "정말로 삭제 하시겠습니까?";
 				
 		
@@ -300,7 +301,6 @@
 	
 			})
 */		
-			
 			// checkbox all check
 			document.getElementById("checkboxNoLabel0").addEventListener('change', function(){
 				for (var i = 0; i < document.getElementsByName("checked").length; i++) {

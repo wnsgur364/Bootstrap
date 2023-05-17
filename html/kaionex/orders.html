@@ -65,7 +65,7 @@
 			</div>
 		</nav>
 		<div class="container-fluid d-flex justify-content-between gap-3">
-			<div class="col-md-1 fs-6 gx-1">
+			<div class="col-md-2 fs-6 gx-1">
 				<ul class="list-group list-group-flush">
 			  		<li class="list-group-item">
 			  			<a class="nav-link" href="#">> Home</a>
@@ -232,7 +232,7 @@
 	
   		  		// Loop over them and prevent submission
   				Array.from(forms).forEach(form => {
-					form.addEventListener('click', event => {
+					document.getElementById('btnBookmark').addEventListener('click', event => {
   		  				if (!form.checkValidity()) {
   		       				event.preventDefault()
   		        			event.stopPropagation()
