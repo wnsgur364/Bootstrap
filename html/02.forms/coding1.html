@@ -20,10 +20,10 @@
 	
 			<select class="form-select" aria-label="Default select example" id="country">
 				<option value="">국적을 선택해주세요</option>
-				<option value="1">korea</option>
-				<option value="2">usa</option>
-				<option value="3">japan</option>
-				<option value="4" >china</option>
+				<option value="korea">korea</option>
+				<option value="usa">usa</option>
+				<option value="japan">japan</option>
+				<option value="china" >china</option>
 			</select>
 	
 			<br>
@@ -56,8 +56,7 @@
 			
 			<br>
 				<div class="mb-3">
-					<button type="button" class="btn btn-primary" id="btnJquery">jquery</button>
-					<button type="button" class="btn btn-primary" id="btnJavascript">javascript</button>
+					<button type="button" class="btn btn-primary" id="btn">확인</button>
 				</div>
 			
 			</form>
@@ -68,41 +67,56 @@
  			
  			// javascript
  			
- 			document.getElementById('btnJavascript').addEventListener('click', function(){
+ 			document.getElementById('btn').addEventListener('click', function(){
  				
+ 				var name = document.getElementById('name');
+ 				var country = document.getElementById('country');
+ 				var hobby = document.getElementsByName('hobby');
+ 				var gender = document.getElementsByName('gender');
  				
- 				alert( document.getElementById('name').value.trim() );
- 				console.log ( document.getElementById('name').value.trim() );
- 				document.getElementById('name').value = "이준혁";
- 				alert( document.getElementById('name').value.trim() );
- 				console.log ( document.getElementById('name').value.trim() );
+ 				// 이름 호출
+ 				alert ( name.value );
+ 				console.log( name.value );
  				
- 				alert( document.getElementById('country').value.trim() );
- 				console.log ( document.getElementById('country').value.trim() );
- 				document.getElementById('country').options[1].selected = true;
- 				alert( document.getElementById('country').value.trim() );
- 				console.log ( document.getElementById('country').value.trim() );
+ 				name.value = "이준혁";
+ 				alert ( name.value );
+ 				console.log( name.value );
  				
- 				for ( var i=0; i<document.getElementsByName('hobby').length; i++ ) {
+ 				// 국가 호출
+ 				alert ( country.value );
+ 				console.log( country.value );
+ 				
+ 				country.options[1].selected = true;
+ 				alert ( country.value );
+ 				console.log( country.value );
+ 				
+ 				// 취미 체크박스
+ 				for ( var i=0; i<hobby.length; i++ ) {
  					
- 					if ( document.getElementsByName('hobby')[i].checked == true ) {				
- 						alert( document.getElementsByName('hobby')[i].value )
- 						new Array().push( document.getElementsByName('hobby')[i].value );
- 						console.log ( document.getElementsByName('hobby')[i].value )
+ 					var hobbyArray = new Array();
+ 					
+ 					if ( hobby[i].checked == true ) {	
+ 						alert( hobby[i].value );
+ 						console.log( hobby[i].value );
+ 						hobbyArray.push( hobby[i].value );		
  					} 
  					
- 					document.getElementsByName('hobby')[0].checked = false;
- 	 				document.getElementsByName('hobby')[2].checked = true;
- 	 				alert( document.getElementsByName('hobby')[i].value )
- 					console.log ( document.getElementsByName('hobby')[i].value )
-		
+ 					hobby[0].checked = false;
+ 	 				hobby[2].checked = true;
+ 	 						
  				}
  				
+ 				// 성별 라디오박스
  				alert( document.querySelector("input[name='gender']:checked").value );
- 				document.getElementsByName('gender')[1].checked = false;
- 				document.getElementsByName('gender')[0].checked = true;
+ 				console.log( document.querySelector("input[name='gender']:checked").value );
  				
+ 				gender[0].checked = true;
+ 				gender[1].checked = false;
  				
+ 				alert( document.querySelector("input[name='gender']:checked").value );
+ 				console.log( document.querySelector("input[name='gender']:checked").value );
+ 				
+ 				 				
  				});
   		
  		</script>  	
