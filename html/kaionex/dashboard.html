@@ -71,10 +71,10 @@
 			  			<a class="nav-link" href="#">> Home</a>
 			  		</li>
 			  		<li class="list-group-item">
-			  			<a class="nav-link" href="dashboard.html">> Dashboard</a>	
+			  			<a class="nav-link" href="#">> Dashboard</a>	
 			  		</li>
 			  		<li class="list-group-item">
-			  			<a class="nav-link" href="orders.html">> Orders</a>
+			  			<a class="nav-link" href="#">> Orders</a>
 			  		</li>
 			  		<li class="list-group-item"><br></li>
 			 		<li class="list-group-item">
@@ -85,6 +85,7 @@
 			<form class="col fs-6">	
 				<div class="col">
 					<div class="p fs-5 fw-bold">국가코드 관리</div>
+					<br>
 					<div class="row">
 						<div class="col-md-2">
 	    					<select id="" class="form-select">
@@ -215,11 +216,13 @@
 						</button>
 					</div>
 					<div class="col float-end">
-						<button type="button" class="btn btn-success" id="btnExcel" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"
-							><i class="fa-solid fa-file-excel" style="color: #ffffff;"></i>
+						<button type="button" class="btn btn-success" id="btnExcel" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+							<i class="fa-solid fa-file-excel" style="color: #ffffff;"></i>
 						</button>
 						<button type="button" class="btn btn-success" id="btnPlus">
-							<i class="fa-solid fa-plus" style="color: #ffffff;"></i>
+							<a href="orders.html">
+								<i class="fa-solid fa-plus" style="color: #ffffff;"></i>
+							</a>
 						</button>
 					</div>
 				</div>
@@ -232,38 +235,22 @@
 		<div class="col d-flex justify-content-center">
 			<div class="p">Copyright 2014. Mycompany inc. all rights reserved</div>
 		</div>
+		
+		
 		<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" 
 			 aria-hidden="true">
 	  		<div class="modal-dialog">
 	    		<div class="modal-content">
 	      			<div class="modal-header">
-	        			<h1 class="modal-title fs-5" id="staticBackdropLabel">삭제 하실??</h1>
+	        			<h1 class="modal-title fs-5" id="staticBackdropLabel">title</h1>
 	        			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 	      			</div>
-	      			<div class="modal-body">
-	        		진짜??
+	      			<div class="modal-body" id="staticBackdropBody">
+	        		body
 	      			</div>
 	      			<div class="modal-footer">
-	        			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">아니</button>
-	        			<button type="button" class="btn btn-primary">어</button>
-	      			</div>
-	    		</div>
-	  		</div>
-		</div>
-		<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" 
-			 aria-hidden="true">
-	  		<div class="modal-dialog">
-	    		<div class="modal-content">
-	      			<div class="modal-header">
-	        			<h1 class="modal-title fs-5" id="staticBackdropLabel2">엑셀 변환 하실??</h1>
-	        			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-	      			</div>
-	      			<div class="modal-body">
-	        		진짜??
-	      			</div>
-	      			<div class="modal-footer">
-	        			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">아니</button>
-	        			<button type="button" class="btn btn-primary">어</button>
+	        			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+	        			<button type="button" class="btn btn-primary">확인</button>
 	      			</div>
 	    		</div>
 	  		</div>
@@ -275,6 +262,7 @@
   		<script type="text/javascript">
   			
   			// bootstrap modal
+/*   			
 			var myModal = document.getElementById('staticBackdrop')
 			var myInput = document.getElementById('btnDelete')
 
@@ -282,12 +270,36 @@
  				myInput.focus()
 			})
 			
-			var myModal = document.getElementById('staticBackdrop2')
+			var myModal = document.getElementById('staticBackdrop')
 			var myInput = document.getElementById('btnExcel')
 
 			myModal.addEventListener('shown.bs.modal', () => {
  				myInput.focus()
 			})
+*/			
+			
+			//$("#modalConfirm").modal("show");
+  			
+			document.getElementById('btnDelete').addEventListener('click', function(){
+				
+				document.getElementById('staticBackdrop').style.display = "block";
+				
+				document.getElementById('staticBackdropLabel').textContent = "경고!!";
+				document.getElementById('staticBackdropBody').textContent = "정말로 삭제 하시겠습니까?";
+				
+		
+			})
+/* 			
+			document.getElementById('btnExcel').addEventListener('click', function(){
+				
+				document.getElementById('staticBackdrop').style.display = "block";
+				
+				document.getElementById('staticBackdropLabel').textContent = "확인";
+				document.getElementById('staticBackdropBody').textContent = "엑셀로 변환 하시겠습니까?";
+				
+	
+			})
+*/		
 			
 			// checkbox all check
 			document.getElementById("checkboxNoLabel0").addEventListener('change', function(){
