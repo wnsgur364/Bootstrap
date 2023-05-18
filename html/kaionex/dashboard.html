@@ -214,7 +214,7 @@
 						</button>
 					</div>
 					<div class="col float-end">
-						<button type="button" class="btn btn-success" id="btnExcel" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+						<button type="button" class="btn btn-success" id="btnExcel" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
 							<i class="fa-solid fa-file-excel" style="color: #ffffff;"></i>
 						</button>
 						<button type="button" class="btn btn-success" id="btnPlus">
@@ -235,7 +235,7 @@
 		</div>
 		
 		
-		<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" 
+		<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropTitle" 
 			 aria-hidden="true">
 	  		<div class="modal-dialog">
 	    		<div class="modal-content">
@@ -261,34 +261,24 @@
   		<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   		<script type="text/javascript">
   			
-  			// bootstrap modal
-/*   			
-			var myModal = document.getElementById('staticBackdrop')
-			var myInput = document.getElementById('btnDelete')
-
-			myModal.addEventListener('shown.bs.modal', () => {
- 				myInput.focus()
- 				document.getElementById('staticBackdropLabel').textContent = "경고!!";
-				document.getElementById('staticBackdropBody').textContent = "정말로 삭제 하시겠습니까?";
-			})
-			
-			var myModal = document.getElementById('staticBackdrop')
-			var myInput = document.getElementById('btnExcel')
-
-			myModal.addEventListener('shown.bs.modal', () => {
- 				myInput.focus()
-			})
-*/			
-			
-			//$("#modalConfirm").modal("show");
+  			// bootstrap modal 	
+  			
 			document.getElementById('btnDelete').addEventListener('click', function(){
 				
 				document.getElementById('staticBackdrop').style.display = "block";
 				
-				document.getElementById('staticBackdropTitle').textContent = "경고!!";
-				document.getElementById('staticBackdropBody').textContent = "정말로 삭제 하시겠습니까?";
+				document.getElementById('staticBackdropTitle').textContent = "삭제";
+				document.getElementById('staticBackdropBody').textContent = "정말 삭제 하시겠습니까?";
 				
-		
+			}) 
+			
+			document.getElementById('btnExcel').addEventListener('click', function(){
+				
+				document.getElementById('staticBackdrop').style.display = "block";
+				
+				document.getElementById('staticBackdropTitle').textContent = "엑셀변환";
+				document.getElementById('staticBackdropBody').textContent = "엑셀 파일로 저장 하시겠습니까?";
+				
 			})
 			
 			// checkbox all check
