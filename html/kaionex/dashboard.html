@@ -262,6 +262,10 @@
   		<script type="text/javascript">
   			
   			// bootstrap modal 	
+  			var staticBackdrop = document.getElementById('staticBackdrop')
+  			var staticBackdropTitle = document.getElementById('staticBackdropTitle')
+  			var staticBackdropBody = document.getElementById('staticBackdropBody')
+  			
   			
 			document.getElementById('btnDelete').addEventListener('click', function(){
 				
@@ -274,10 +278,10 @@
 			
 			document.getElementById('btnExcel').addEventListener('click', function(){
 				
-				document.getElementById('staticBackdrop').style.display = "block";
+				staticBackdrop.style.display = "block";
 				
-				document.getElementById('staticBackdropTitle').textContent = "엑셀변환";
-				document.getElementById('staticBackdropBody').textContent = "엑셀 파일로 저장 하시겠습니까?";
+				staticBackdropTitle.textContent = "엑셀변환";
+				staticBackdropBody.textContent = "엑셀 파일로 저장 하시겠습니까?";
 				
 			})
 			
@@ -296,7 +300,6 @@
 				});
   
 			});
-			
 			
 		</script>
   	</body>
