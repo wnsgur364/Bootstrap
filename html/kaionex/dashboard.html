@@ -95,13 +95,13 @@
 	    					</select>
 	  					</div>
 						<div class="col-md-2">
-	    					<input id="datepicker" type="text" class="form-control" placeholder="날짜">
+	    					<input type="text" class="form-control datepicker" placeholder="날짜">
 	  					</div>
 	  					<div class="col-md-2">
-	    					<input type="text" class="form-control" placeholder="시작일" disabled>
+	    					<input type="text" class="form-control datepicker" placeholder="시작일">
 	  					</div>
 	  					<div class="col-md-2">
-	    					<input type="text" class="form-control" placeholder="종료일" disabled>
+	    					<input type="text" class="form-control datepicker" placeholder="종료일">
 	  					</div>  					
 					</div>
 					<div class="row">
@@ -112,7 +112,7 @@
 	    					</select>
 	  					</div>
 	  					<div class="col-md-2">
-	    					<input type="text" class="form-control" placeholder="검색어" disabled>
+	    					<input type="text" class="form-control" placeholder="검색어">
 	  					</div>  
 	  					<div class="col">
 							<button type="button" class="btn btn-danger" id="btnSearch">
@@ -290,17 +290,7 @@
 				
 		
 			})
-/* 			
-			document.getElementById('btnExcel').addEventListener('click', function(){
-				
-				document.getElementById('staticBackdrop').style.display = "block";
-				
-				document.getElementById('staticBackdropLabel').textContent = "확인";
-				document.getElementById('staticBackdropBody').textContent = "엑셀로 변환 하시겠습니까?";
-				
-	
-			})
-*/		
+			
 			// checkbox all check
 			document.getElementById("checkboxNoLabel0").addEventListener('change', function(){
 				for (var i = 0; i < document.getElementsByName("checked").length; i++) {
@@ -308,12 +298,16 @@
 				}
 			});
 			
-			$( function() {
-				
-				$( "#datepicker" ).datepicker();
-				
-			} );
-		
+			// datepicker
+			$(function() {
+  
+				$(".datepicker").datepicker({
+					dateFormat: 'yy-mm-dd'
+				});
+  
+			});
+			
+			
 		</script>
   	</body>
 </html>
